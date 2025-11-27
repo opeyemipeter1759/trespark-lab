@@ -1,13 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { TrendingUp, ArrowRight } from 'lucide-react';
 import Testimonials from '../components/Testimonials';
-import { PageType } from '../App';
 
-interface CaseStudiesPageProps {
-  onNavigate: (page: PageType) => void;
-}
-
-const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ onNavigate }) => {
+const CaseStudiesPage: React.FC = () => {
   return (
     <div>
       <section className="py-16 sm:py-24 text-center px-4">
@@ -24,10 +20,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ onNavigate }) => {
       <section className="pb-16 sm:pb-24 px-4">
         <div className="flex flex-col gap-12 lg:gap-16">
           {/* Innovate Inc. */}
-          <div 
-            className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center cursor-pointer"
-            onClick={() => onNavigate('project-details')}
-          >
+          <Link to="/project-details" className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center cursor-pointer">
             <div className="overflow-hidden rounded-xl">
               <img
                 className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-300"
@@ -73,13 +66,10 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ onNavigate }) => {
                 <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1 size-5" />
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* TechForward */}
-          <div 
-            className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center cursor-pointer"
-            onClick={() => onNavigate('project-details')}
-          >
+          <Link to="/project-details" className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center cursor-pointer">
             <div className="overflow-hidden rounded-xl lg:order-2">
               <img
                 className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-300"
@@ -125,13 +115,10 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ onNavigate }) => {
                 <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1 size-5" />
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Solutionize */}
-          <div 
-            className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center cursor-pointer"
-            onClick={() => onNavigate('project-details')}
-          >
+          <Link to="/project-details" className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center cursor-pointer">
             <div className="overflow-hidden rounded-xl">
               <img
                 className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-300"
@@ -177,7 +164,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ onNavigate }) => {
                 <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1 size-5" />
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 

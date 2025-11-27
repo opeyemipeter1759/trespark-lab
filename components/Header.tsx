@@ -1,62 +1,31 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { PageType } from '../App';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-interface HeaderProps {
-  currentPage: PageType;
-  onNavigate: (page: PageType) => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const handleNav = (target: PageType | string) => {
+  const handleContactNav = () => {
     setIsMenuOpen(false);
-    
-    if (target === 'home') {
-      onNavigate('home');
-    } else if (target === 'services') {
-      onNavigate('services');
-    } else if (target === 'portfolio') {
-      onNavigate('portfolio');
-    } else if (target === 'about') {
-      onNavigate('about');
-    } else if (target === 'case-studies') {
-      onNavigate('case-studies');
-    } else if (typeof target === 'string' && target.startsWith('#')) {
-      // Handle hash navigation
-      if (target === '#contact') {
-         // Contact is on home/services and About has a CTA
-         const el = document.getElementById('contact');
-         if (el) {
-           el.scrollIntoView({ behavior: 'smooth' });
-           return;
-         }
-      }
-      
-      // Default behavior for other anchors
-      if (currentPage !== 'home') {
-        onNavigate('home');
-        // Wait for render then scroll
-        setTimeout(() => {
-          const el = document.querySelector(target);
-          el?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      } else {
-        const el = document.querySelector(target);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const el = document.getElementById('contact');
         el?.scrollIntoView({ behavior: 'smooth' });
-      }
+      }, 100);
+    } else {
+      const el = document.getElementById('contact');
+      el?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const isCaseStudiesActive = currentPage === 'case-studies' || currentPage === 'project-details';
+  const isCaseStudiesActive = location.pathname.startsWith('/case-studies') || location.pathname.startsWith('/project-details');
 
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-card-light dark:border-card-dark px-6 sm:px-10 py-4 sticky top-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm z-50">
-      <div 
-        className="flex items-center gap-4 text-foreground-light dark:text-foreground-dark cursor-pointer"
-        onClick={() => handleNav('home')}
-      >
+      <Link to="/" className="flex items-center gap-4 text-foreground-light dark:text-foreground-dark cursor-pointer">
         <div className="size-6 text-primary">
           <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -66,18 +35,18 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           </svg>
         </div>
         <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">Product Lab</h2>
-      </div>
+      </Link>
       
       {/* Desktop Navigation */}
       <div className="hidden md:flex flex-1 justify-end gap-8 items-center">
         <div className="flex items-center gap-9">
-          <button onClick={() => handleNav('home')} className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${currentPage === 'home' ? 'text-primary' : ''}`}>Home</button>
-          <button onClick={() => handleNav('services')} className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${currentPage === 'services' ? 'text-primary' : ''}`}>Services</button>
-          <button onClick={() => handleNav('portfolio')} className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${currentPage === 'portfolio' ? 'text-primary' : ''}`}>Portfolio</button>
-          <button onClick={() => handleNav('case-studies')} className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${isCaseStudiesActive ? 'text-primary' : ''}`}>Case Studies</button>
-          <button onClick={() => handleNav('about')} className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${currentPage === 'about' ? 'text-primary' : ''}`}>About Us</button>
+          <Link to="/" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${location.pathname === '/' ? 'text-primary' : ''}`}>Home</Link>
+          <Link to="/services" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${location.pathname === '/services' ? 'text-primary' : ''}`}>Services</Link>
+          <Link to="/portfolio" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${location.pathname === '/portfolio' ? 'text-primary' : ''}`}>Portfolio</Link>
+          <Link to="/case-studies" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${isCaseStudiesActive ? 'text-primary' : ''}`}>Case Studies</Link>
+          <Link to="/about" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${location.pathname === '/about' ? 'text-primary' : ''}`}>About Us</Link>
         </div>
-        <button onClick={() => handleNav('#contact')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary dark:bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+        <button onClick={handleContactNav} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary dark:bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
           <span className="truncate">Contact Us</span>
         </button>
       </div>
@@ -92,12 +61,12 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-background-light dark:bg-background-dark border-b border-card-light dark:border-card-dark p-4 flex flex-col gap-4 shadow-lg md:hidden">
-           <button className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => handleNav('home')}>Home</button>
-           <button className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => handleNav('services')}>Services</button>
-           <button className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => handleNav('portfolio')}>Portfolio</button>
-           <button className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => handleNav('case-studies')}>Case Studies</button>
-           <button className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => handleNav('about')}>About Us</button>
-           <button className="w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary dark:bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity" onClick={() => handleNav('#contact')}>
+           <Link to="/" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
+           <Link to="/services" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Services</Link>
+           <Link to="/portfolio" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
+           <Link to="/case-studies" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Case Studies</Link>
+           <Link to="/about" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+           <button className="w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary dark:bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity" onClick={handleContactNav}>
             <span className="truncate">Contact Us</span>
           </button>
         </div>

@@ -1,5 +1,29 @@
 import React from 'react';
 import { ListChecks, Palette, Layers, Megaphone } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const services = [
+  {
+    icon: <ListChecks size={32} className="text-primary mb-2" strokeWidth={1.5} />,
+    title: 'MVP Strategy',
+    description: 'Defining core features and a go-to-market plan for maximum impact.',
+  },
+  {
+    icon: <Palette size={32} className="text-primary mb-2" strokeWidth={1.5} />,
+    title: 'UI/UX Design',
+    description: 'Crafting intuitive and beautiful interfaces that users love.',
+  },
+  {
+    icon: <Layers size={32} className="text-primary mb-2" strokeWidth={1.5} />,
+    title: 'Full-Stack Development',
+    description: 'Building robust and scalable products with modern technology.',
+  },
+  {
+    icon: <Megaphone size={32} className="text-primary mb-2" strokeWidth={1.5} />,
+    title: 'Go-to-Market Support',
+    description: 'Assisting with your launch strategy for a successful market entry.',
+  },
+];
 
 const Services: React.FC = () => {
   return (
@@ -9,42 +33,23 @@ const Services: React.FC = () => {
           Our Services
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="flex flex-col gap-3 rounded-xl border border-card-light dark:border-card-dark p-6 bg-transparent hover:border-primary/50 transition-colors">
-            <ListChecks size={32} className="text-primary mb-2" strokeWidth={1.5} />
-            <div className="flex flex-col gap-1">
-              <h3 className="text-lg font-bold leading-tight">MVP Strategy</h3>
-              <p className="text-sm font-normal leading-normal text-muted-light dark:text-muted-dark">
-                Defining core features and a go-to-market plan for maximum impact.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 rounded-xl border border-card-light dark:border-card-dark p-6 bg-transparent hover:border-primary/50 transition-colors">
-            <Palette size={32} className="text-primary mb-2" strokeWidth={1.5} />
-            <div className="flex flex-col gap-1">
-              <h3 className="text-lg font-bold leading-tight">UI/UX Design</h3>
-              <p className="text-sm font-normal leading-normal text-muted-light dark:text-muted-dark">
-                Crafting intuitive and beautiful interfaces that users love.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 rounded-xl border border-card-light dark:border-card-dark p-6 bg-transparent hover:border-primary/50 transition-colors">
-            <Layers size={32} className="text-primary mb-2" strokeWidth={1.5} />
-            <div className="flex flex-col gap-1">
-              <h3 className="text-lg font-bold leading-tight">Full-Stack Development</h3>
-              <p className="text-sm font-normal leading-normal text-muted-light dark:text-muted-dark">
-                Building robust and scalable products with modern technology.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 rounded-xl border border-card-light dark:border-card-dark p-6 bg-transparent hover:border-primary/50 transition-colors">
-            <Megaphone size={32} className="text-primary mb-2" strokeWidth={1.5} />
-            <div className="flex flex-col gap-1">
-              <h3 className="text-lg font-bold leading-tight">Go-to-Market Support</h3>
-              <p className="text-sm font-normal leading-normal text-muted-light dark:text-muted-dark">
-                Assisting with your launch strategy for a successful market entry.
-              </p>
-            </div>
-          </div>
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex flex-col gap-3 rounded-xl border border-card-light dark:border-card-dark p-6 bg-transparent hover:border-primary/50 transition-colors"
+            >
+              {service.icon}
+              <div className="flex flex-col gap-1">
+                <h3 className="text-lg font-bold leading-tight">{service.title}</h3>
+                <p className="text-sm font-normal leading-normal text-muted-light dark:text-muted-dark">
+                  {service.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

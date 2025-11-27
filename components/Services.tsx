@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListChecks, Palette, Layers, Megaphone } from 'lucide-react';
+import { ListChecks, Palette, Smartphone, Globe, Server, BrainCircuit, Megaphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const services = [
@@ -14,9 +14,24 @@ const services = [
     description: 'Crafting intuitive and beautiful interfaces that users love.',
   },
   {
-    icon: <Layers size={32} className="text-primary mb-2" strokeWidth={1.5} />,
-    title: 'Full-Stack Development',
-    description: 'Building robust and scalable products with modern technology.',
+    icon: <Smartphone size={32} className="text-primary mb-2" strokeWidth={1.5} />,
+    title: 'Mobile Development',
+    description: 'Building native and cross-platform mobile applications.',
+  },
+  {
+    icon: <Globe size={32} className="text-primary mb-2" strokeWidth={1.5} />,
+    title: 'Web Development',
+    description: 'Creating robust, scalable, and secure web solutions.',
+  },
+  {
+    icon: <Server size={32} className="text-primary mb-2" strokeWidth={1.5} />,
+    title: 'DevOps',
+    description: 'Streamlining development and deployment for faster time to market.',
+  },
+  {
+    icon: <BrainCircuit size={32} className="text-primary mb-2" strokeWidth={1.5} />,
+    title: 'LLMOps/AIOps',
+    description: 'Managing and scaling your AI and machine learning models.',
   },
   {
     icon: <Megaphone size={32} className="text-primary mb-2" strokeWidth={1.5} />,

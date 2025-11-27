@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PortfolioPage: React.FC = () => {
   const filters = ["All", "Web App", "Mobile App", "AI/ML", "FinTech", "SaaS"];
@@ -72,7 +73,7 @@ const PortfolioPage: React.FC = () => {
       <div className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="flex flex-col gap-4 group cursor-pointer">
+            <Link to="/product" state={{ project }} key={index} className="flex flex-col gap-4 group cursor-pointer">
               <div className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
                 <div 
                   className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" 
@@ -85,7 +86,7 @@ const PortfolioPage: React.FC = () => {
                 <p className="text-sm font-normal leading-normal text-muted-light dark:text-muted-dark">{project.desc}</p>
                 <p className="text-xs font-medium leading-normal text-muted-light/70 dark:text-muted-dark/70 pt-2">{project.tags}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

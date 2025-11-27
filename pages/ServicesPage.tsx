@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListChecks, CheckCircle, Palette, Layers, Megaphone } from 'lucide-react';
+import { ListChecks, CheckCircle, Palette, Layers, Megaphone, Smartphone, Globe, Server, BrainCircuit } from 'lucide-react';
 import CTA from '../components/CTA';
 
 const ServicesPage: React.FC = () => {
@@ -91,29 +91,29 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
-        <section className="px-4" id="full-stack-development">
+        <section className="px-4" id="mobile-development">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4 text-primary">
-                <Layers className="size-10" strokeWidth={1.5} />
+                <Smartphone className="size-10" strokeWidth={1.5} />
                 <h2 className="text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] text-secondary dark:text-white">
-                  Full-Stack Development
+                  Mobile Development
                 </h2>
               </div>
               <p className="text-muted-light dark:text-muted-dark">
-                Our developers are masters of modern technology stacks, capable of building robust, scalable, and secure applications. We handle everything from the front-end to the back-end, database, and infrastructure, ensuring a seamless and efficient development process that brings your designs to life.
+                We build native and cross-platform mobile applications for iOS and Android. Our focus is on creating smooth, engaging, and high-performing mobile experiences that delight users and achieve business goals.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
                   <span className="text-foreground-light dark:text-foreground-dark">
-                    <span className="font-bold">Benefits:</span> Get a high-quality product built fast, with clean code and a scalable architecture for future growth.
+                    <span className="font-bold">Benefits:</span> Reach your users on their favorite devices, improve engagement with push notifications, and leverage device-specific features.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
                   <span className="text-foreground-light dark:text-foreground-dark">
-                    <span className="font-bold">Case Study:</span> Built and deployed the entire platform for TechForward in under 12 weeks, handling over 10,000 active users at launch without a hitch.
+                    <span className="font-bold">Case Study:</span> Developed a social networking app for 'ConnectSphere' that reached 100,000 downloads within the first three months of launch.
                   </span>
                 </li>
               </ul>
@@ -121,9 +121,120 @@ const ServicesPage: React.FC = () => {
             <div className="w-full">
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
-                alt="Lines of code on a dark-themed computer screen."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE4rrI976YuxQTOymfGUw_W629yMZPwLS7TfGBNoj_2C7WttZdnqCNtJjlLuLwp2mzqGx_hItG8AJYVNgT1qIjJaGZ2b5TQ6uvH1dVrMw7NSPdtG9aZNnUmztQWIjYEQFuC8Gj6h8sJXJOfrcZkghm1ugXd5uO31FTbAH5ty4iFXYhlK7mSE8slSNRvgPrXEKJwbd2gxJz-QwJqWaSgDbLlbbPmdaWYAYgCYwzbflOzThAwVwB1KKbT5hqwusbTIijBSa74UdC-2zB"
+                alt="A user interacting with a mobile app on a smartphone."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-w"
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4" id="web-development">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="w-full lg:order-last">
+              <img
+                className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
+                alt="A web developer working on a laptop with code on the screen."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-x"
+              />
+            </div>
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4 text-primary">
+                <Globe className="size-10" strokeWidth={1.5} />
+                <h2 className="text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] text-secondary dark:text-white">
+                  Web Development
+                </h2>
+              </div>
+              <p className="text-muted-light dark:text-muted-dark">
+                From dynamic single-page applications to complex enterprise-level web platforms, we build robust, scalable, and secure solutions. We leverage modern web technologies to create fast, responsive, and SEO-friendly websites and applications.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
+                  <span className="text-foreground-light dark:text-foreground-dark">
+                    <span className="font-bold">Benefits:</span> Establish a strong online presence, deliver seamless user experiences across all browsers, and build a platform for future growth.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
+                  <span className="text-foreground-light dark:text-foreground-dark">
+                    <span className="font-bold">Case Study:</span> Built a custom e-commerce platform for 'GadgetGo' that resulted in a 40% increase in online sales and a 25% improvement in page load times.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4" id="devops">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4 text-primary">
+                <Server className="size-10" strokeWidth={1.5} />
+                <h2 className="text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] text-secondary dark:text-white">
+                  DevOps
+                </h2>
+              </div>
+              <p className="text-muted-light dark:text-muted-dark">
+                We streamline your development and deployment processes with our DevOps expertise. We implement CI/CD pipelines, automated testing, and infrastructure as code to increase development velocity, improve reliability, and reduce operational overhead.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
+                  <span className="text-foreground-light dark:text-foreground-dark">
+                    <span className="font-bold">Benefits:</span> Faster time to market, increased deployment frequency, more stable operating environments, and improved developer productivity.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
+                  <span className="text-foreground-light dark:text-foreground-dark">
+                    <span className="font-bold">Expertise:</span> Our team is proficient with leading DevOps tools and platforms like Docker, Kubernetes, Jenkins, GitHub Actions, and Terraform.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div className="w-full">
+              <img
+                className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
+                alt="A diagram of a CI/CD pipeline."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-y"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4" id="llm-ai-ops">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="w-full lg:order-last">
+              <img
+                className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
+                alt="An abstract representation of an AI brain."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-z"
+              />
+            </div>
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4 text-primary">
+                <BrainCircuit className="size-10" strokeWidth={1.5} />
+                <h2 className="text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] text-secondary dark:text-white">
+                  LLMOps/AI Ops
+                </h2>
+              </div>
+              <p className="text-muted-light dark:text-muted-dark">
+                We help you build, deploy, and manage your Large Language Models (LLMs) and AI applications at scale. Our expertise in LLMOps and AI Ops ensures that your models are reliable, scalable, and continuously monitored for performance and accuracy.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
+                  <span className="text-foreground-light dark:text-foreground-dark">
+                    <span className="font-bold">Benefits:</span> Accelerate your AI/ML development lifecycle, ensure model reproducibility, automate model deployment and monitoring, and reduce the operational complexity of managing AI systems.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
+                  <span className="text-foreground-light dark:text-foreground-dark">
+                    <span className="font-bold">Expertise:</span> We have hands-on experience with MLOps platforms, model serving frameworks, and monitoring tools for LLMs and other AI models.
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>

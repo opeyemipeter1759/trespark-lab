@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
+// Import local images so Vite/bundler resolves them during dev/build
+const sparkImg = new URL('../components/assests/spark.png', import.meta.url).href;
+const fojoImg = new URL('../components/assests/fojo.png', import.meta.url).href;
+const gccImg = new URL('../components/assests/gcc.png', import.meta.url).href;
+const virImg = new URL('../components/assests/vir.png', import.meta.url).href;
+const lushImg = new URL('../components/assests/lush.png', import.meta.url).href;
+
 const PortfolioPage: React.FC = () => {
   const filters = ["All", "Web App", "Mobile App", "AI/ML", "FinTech", "SaaS"];
   const [activeFilter, setActiveFilter] = useState("All");
@@ -27,7 +34,7 @@ const PortfolioPage: React.FC = () => {
       desc: "A streamlined dashboard for automating payment processes, tracking transactions, and ensuring smooth financial management.",
       tags: "Next Js,TypeScricpt, Node.js, Figma",
       categories: ["FinTech", "Web App","Mobile App"],
-      image: "../components/assests/spark.png",
+      image: sparkImg,
       link: "https://www.sparkpayhq.com/"
     },
     {
@@ -35,7 +42,7 @@ const PortfolioPage: React.FC = () => {
       desc: "A streamlined dashboard for delivering lessons, tracking progress, and supporting member learning and training.",
       tags: "Next Js, Typescript, PHP, Mysql , Figma",
       categories: [ "Web App"],
-      image: "../components/assests/fojo.png",
+      image: fojoImg,
       link: "https://fojoglobal.co.uk/"
     },
     {
@@ -43,7 +50,7 @@ const PortfolioPage: React.FC = () => {
       desc: "A smart dashboard for tracking attendance, monitoring member activity, and providing insights for better church engagement.",
       tags: "React Native, Firebase",
       categories: ["Web App"],
-      image: "../components/assests/gcc.png",
+      image: gccImg,
       link: "https://gcccibadan.org/"
     },
     {
@@ -51,7 +58,7 @@ const PortfolioPage: React.FC = () => {
       desc: "Empowering businesses to convert obstacles into competitive advantages with innovative, data-driven solutions.",
       tags: "Next js, Typescript ",
       categories: [ "Web App"],
-      image: "../components/assests/vir.png",
+      image: virImg,
       link: "https://www.viridisgreen.co.uk/"
     },
     {
@@ -59,7 +66,7 @@ const PortfolioPage: React.FC = () => {
       desc: "Turn compliance into confidence with Lush Corporate Services—expert training, consulting, and coaching to help your organization thrive.",
       tags: "Python, TensorFlow",
       categories: ["Web App"],
-      image: "../components/assests/lush.png",
+      image: lushImg,
       link: "https://www.lushcorporate.co.uk/"
     },
   ];
@@ -119,12 +126,12 @@ const PortfolioPage: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
               <Link to="/product" state={{ project }} key={index} className="flex flex-col gap-4 group cursor-pointer">
-                <div className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
-                  <div 
-                    className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" 
-                    style={{ backgroundImage: `url('${project.image}')` }}
-                    aria-label={project.title}
-                  ></div>
+                <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="flex flex-col">
                   <p className="text-lg font-bold leading-normal text-secondary dark:text-white">{project.title}</p>

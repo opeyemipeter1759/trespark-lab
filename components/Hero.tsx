@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
+import {  useLocation, useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+    const handleContactNav = () => {
+    setIsMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const el = document.getElementById('contact');
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const el = document.getElementById('contact');
+      el?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="py-16 sm:py-24">
       <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center px-4">
-        
-        {/* LEFT SIDE (TEXT) */}
-        <motion.div
+          <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -23,11 +39,12 @@ const Hero: React.FC = () => {
           </div>
 
           <motion.button
+            onClick={handleContactNav}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="flex self-center lg:self-start min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-secondary dark:text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity shadow-md hover:shadow-lg"
           >
-            <span className="truncate">Schedule a Free Strategy Call</span>
+            <span  className="truncate">Schedule a Free Strategy Call</span>
           </motion.button>
         </motion.div>
 

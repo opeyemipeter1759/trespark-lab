@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, ArrowRight } from 'lucide-react';
 import Testimonials from '../components/Testimonials';
+import CTA from '@/components/CTA';
 
 const CaseStudiesPage: React.FC = () => {
   return (
@@ -169,20 +170,8 @@ const CaseStudiesPage: React.FC = () => {
       </section>
 
       <Testimonials />
-
-      <section className="pb-16 sm:pb-24 px-4" id="contact">
-        <div className="bg-secondary dark:bg-card-dark rounded-xl px-6 py-12 sm:p-16 text-center shadow-lg">
-          <h2 className="text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4 text-white">
-            Ready to Build Your Big Idea?
-          </h2>
-          <p className="text-muted-dark mb-8 max-w-2xl mx-auto">
-            Let's talk about how we can turn your vision into a reality. Schedule a free, no-obligation strategy call with our experts today.
-          </p>
-          <button className="flex min-w-[84px] mx-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-secondary dark:text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
-            <span className="truncate">Schedule a Free Strategy Call</span>
-          </button>
-        </div>
-      </section>
+      <CTA/>
+    
     </div>
   );
 };

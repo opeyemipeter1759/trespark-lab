@@ -44,7 +44,7 @@ const AboutPage: React.FC = () => {
           <h2 className="text-secondary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] sm:text-4xl text-center">
             Our Core Values
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 w-full">
             <div className="flex flex-col items-start text-left gap-4 p-6 rounded-xl bg-background-light dark:bg-card-dark">
               <div className="flex items-center justify-center size-12 rounded-lg bg-primary/10 text-primary">
                 <Users className="size-8" />
@@ -99,11 +99,11 @@ const AboutPage: React.FC = () => {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCDZ0oqSliNZZHvRfjYa5rKMm95Fk8IRTdVoOCDCCixZGM581H8DUQT33HZh29rOryAQN6Ki9ZCF7QptPKCvcG3HkYCfkrvUqwOBNKc-Tsu9yI6Gg69NIGxraRC2ifJOyzsB-mgmgh5yiu4yJ0CZdplO16Mgv5FHXugfpltrxiW6eLXMBwdfphvefQ7CO2cf2qL-GhzQo4ctwe9Vv9vABmSIHesS-2nU-S3q2n7LmVUHzb-E1bLTvP7LsxRq0vaohUINgYgBMNXbuq"
               />
               <div className="flex flex-col gap-1">
-                <h3 className="text-xl font-bold text-secondary dark:text-white">Alex Chen</h3>
+                <h3 className="text-xl font-bold text-secondary dark:text-white">Opeyemi Peter</h3>
                 <p className="text-sm font-medium text-primary">Founder & CEO</p>
               </div>
               <p className="text-sm text-muted-light dark:text-muted-dark max-w-xs">
-                A serial entrepreneur with two successful exits, Alex founded the lab to help founders avoid the pitfalls he encountered on his journey.
+                A serial entrepreneur with two successful exits, Opeyemi Peter founded the lab to help founders avoid the pitfalls he encountered on his journey.
               </p>
             </div>
             <div className="flex flex-col items-center text-center gap-4">
@@ -113,11 +113,11 @@ const AboutPage: React.FC = () => {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBft2rIXqbcSeMW1dLqFKVqFWsKeDNdR_B7pxV9NFiidtuW_q7iwRnnUVUR_ZqzEuJ8ZZNytJF52nU3DD0BkBvfNzZabRMpPxwDQHQlclA48CNKppoF1xEeIEo9n-1Ym7YheY2Gb1TUOeSY8x1cx3q2BTCKi-dc15m2WS8VYvqFCDrbrLSeRAtcZvipOIRjfYhtQYTbLaBw8NfCdxqXCmmW4DhzaOfftGOITXx9HrqY3J1OjMXQPfGURe3n2Hxm5v01MwrnKPT0yhd"
               />
               <div className="flex flex-col gap-1">
-                <h3 className="text-xl font-bold text-secondary dark:text-white">Maria Rodriguez</h3>
+                <h3 className="text-xl font-bold text-secondary dark:text-white">Daniel Olaniyan </h3>
                 <p className="text-sm font-medium text-primary">Lead Product Strategist</p>
               </div>
               <p className="text-sm text-muted-light dark:text-muted-dark max-w-xs">
-                With a decade of experience at top tech firms, Maria specializes in market validation and building products users love.
+                With a decade of experience at top tech firms,Daniel  specializes in market validation and building products users love.
               </p>
             </div>
             <div className="flex flex-col items-center text-center gap-4">

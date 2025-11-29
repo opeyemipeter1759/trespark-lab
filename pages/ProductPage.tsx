@@ -11,7 +11,7 @@ const ProductPage: React.FC = () => {
     return <div>Project not found</div>;
   }
 
-  const { title, desc, tags, image } = project;
+  const { title, desc, tags, image, link } = project;
   const tagList = tags.split(', ').map((tag: string) => tag.trim());
 
   return (
@@ -37,10 +37,17 @@ const ProductPage: React.FC = () => {
             {desc}
           </p>
           <div className="flex justify-center gap-4 mt-4">
-            <button className="flex items-center justify-center gap-2 h-12 px-6 rounded-lg bg-primary text-secondary dark:text-white font-bold hover:opacity-90 transition-opacity">
-              <span>Live Preview</span>
-              <ExternalLink className="size-5" />
-            </button>
+            {link && (
+              <a 
+                href={link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 h-12 px-6 rounded-lg bg-primary text-secondary dark:text-white font-bold hover:opacity-90 transition-opacity"
+              >
+                <span>Live Preview</span>
+                <ExternalLink className="size-5" />
+              </a>
+            )}
           </div>
         </section>
 

@@ -48,7 +48,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="Team brainstorming around a whiteboard with sticky notes."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrjkvjHLEjTLpoHgpQETZnxNLy1Qp-4MzYgUVVeYqS7H9pqCrYXzrGDNAk-lAp71GadG0od2HUaMqgToOS1t944uMZv9xLo6uJESUBpZJ7Kr3rlLzuXMtlQj8tjPBC0xInYO2shzO0RDTX4vqYRLwL8CRRa_dYuj6OeKngk5cYTcZ1xmUGmZt40fnMjp3UWBA0BkeLvL2hIt_KTqDqDshKA4zMk3hllNynTbC7Pvi-PTZiFoxiP166746AD3uISaIHAM0HQAJ0apjq"
+                src="../components/assests/MVP.jpg"
               />
             </div>
           </div>
@@ -60,7 +60,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="UI/UX design mockups on a computer screen and mobile device."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGSNOCg-kl7hi_low-_m6gvNZ5R7pdu_ApuH2qLmCl7WuvWSOwR3Si-tPNTBrGkF6w8YkvvgfSidYqY5d0kl7zgKQDRcUMhl4SZnF8z1WCc5_cPVWd80fZa-ilhx26WH8VhC8l6D-JoPwWgcNQMvlwWxiloresIYDuE6RRSByvKHH9AyX8T8-9j4G_eRdj4Mr_JX-5mtg1DkQCHnT0SlycXM6lYodAgI85eXMFWfKDNtVhFUENeDvegDEXixi6Ce5GdYseCCvNZRlx"
+                src="../components/assests/UI-UX.png"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -122,7 +122,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A user interacting with a mobile app on a smartphone."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-w"
+                src="../components/assests/Mobile-App-Development-Process.png"
               />
             </div>
           </div>
@@ -134,7 +134,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A web developer working on a laptop with code on the screen."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-x"
+                src="../components/assests/top11.png"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -196,7 +196,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A diagram of a CI/CD pipeline."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-y"
+                src="../components/assests/devops_blog_image.jpg"
               />
             </div>
           </div>
@@ -206,9 +206,9 @@ const ServicesPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="w-full lg:order-last">
               <img
-                className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
+                className="w-full h-auto object-contain rounded-xl aspect-video shadow-lg"
                 alt="An abstract representation of an AI brain."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-z"
+                src="../components/assests/DataOps-1024x314.png"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -245,7 +245,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A rocket launching, symbolizing a product launch."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbZOeMk_xZq2EfHLT7swEjB1X6-X-JBziGYXoUZBFXAt0jzuL49oEiq28dZJM0ixpvokdDAPb73vTT-P7xfDxiGKDEu95088HLVQDO-Jlsyg2NqQr0bxJ-XbAHonDdbaRoFh6mCShHwDOKsM6EuJL417N1FsqFt0vMYIFI1LZ6NXGYMJBlfw0e2taoiRcterg_FBpEAvLIDOuQjnniz4zDJh_WWHq0AlMy1zC2jdSpDBbKlrXO51lylZrvOSxE0UJ0_qgZrYgo1yCy"
+                src="../components/assests/market.jpg"
               />
             </div>
             <div className="flex flex-col gap-6">

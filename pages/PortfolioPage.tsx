@@ -45,7 +45,7 @@ const PortfolioPage: React.FC = () => {
       tags: "Next js,Typescript, Python, TensorFlow",
       categories: ["Web App"],
       image: spcImg,
-      link: "https://www.lushcorporate.co.uk/"
+      link: "https://serviceplusconnect.com/"
     },
      {
       title: "Cliq Up",
@@ -53,7 +53,7 @@ const PortfolioPage: React.FC = () => {
       tags: "Next js,Typescript, Python,",
       categories: ["Web App"],
       image: cliqImg,
-      link: "https://www.lushcorporate.co.uk/"
+      link: "https://www.cliqup.co/"
     },
     {
       title: "Members Learning & Training  Dashboard",

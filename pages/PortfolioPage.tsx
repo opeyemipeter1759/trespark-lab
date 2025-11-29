@@ -7,6 +7,8 @@ const fojoImg = new URL('../components/assests/fojo.png', import.meta.url).href;
 const gccImg = new URL('../components/assests/gcc.png', import.meta.url).href;
 const virImg = new URL('../components/assests/vir.png', import.meta.url).href;
 const lushImg = new URL('../components/assests/lush.png', import.meta.url).href;
+const spcImg = new URL('../components/assests/spc.png', import.meta.url).href;
+const cliqImg = new URL('../components/assests/cliq.png', import.meta.url).href;
 
 const PortfolioPage: React.FC = () => {
   const filters = ["All", "Web App", "Mobile App", "AI/ML", "FinTech", "SaaS"];
@@ -36,6 +38,22 @@ const PortfolioPage: React.FC = () => {
       categories: ["FinTech", "Web App","Mobile App"],
       image: sparkImg,
       link: "https://www.sparkpayhq.com/"
+    },
+     {
+      title: "Service Plus Connect",
+      desc: "A service marketplace connecting users with verified professionals for easy booking across multiple service categories, featuring provider profiles, a smooth booking flow, and a fully responsive UI.",
+      tags: "Next js,Typescript, Python, TensorFlow",
+      categories: ["Web App"],
+      image: spcImg,
+      link: "https://www.lushcorporate.co.uk/"
+    },
+     {
+      title: "Cliq Up",
+      desc: "A social-hangout platform that helps people discover nearby friends, join or create small-group activities, and organize hangouts. Users can build interest-based friend-groups (“CLIQs”), browse local events/activities, and easily connect with like-minded people.",
+      tags: "Next js,Typescript, Python,",
+      categories: ["Web App"],
+      image: cliqImg,
+      link: "https://www.lushcorporate.co.uk/"
     },
     {
       title: "Members Learning & Training  Dashboard",

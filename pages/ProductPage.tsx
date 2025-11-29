@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, ExternalLink } from 'lucide-react';
 import Testimonials from '../components/Testimonials';
@@ -6,6 +6,13 @@ import Testimonials from '../components/Testimonials';
 const ProductPage: React.FC = () => {
   const location = useLocation();
   const { project } = location.state;
+
+  // Ensure we start at the top when this page mounts (fixes preserved scroll position on navigation)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+  }, []);
 
   if (!project) {
     return <div>Project not found</div>;

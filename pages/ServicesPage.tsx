@@ -2,6 +2,15 @@ import React from 'react';
 import { ListChecks, CheckCircle, Palette, Layers, Megaphone, Smartphone, Globe, Server, BrainCircuit } from 'lucide-react';
 import CTA from '../components/CTA';
 
+// Resolve local images so Vite includes them during dev/build
+const mvpImg = new URL('../components/assests/MVP.jpg', import.meta.url).href;
+const uiuxImg = new URL('../components/assests/UI-UX.png', import.meta.url).href;
+const mobileProcessImg = new URL('../components/assests/Mobile-App-Development-Process.png', import.meta.url).href;
+const top11Img = new URL('../components/assests/top11.png', import.meta.url).href;
+const devopsImg = new URL('../components/assests/devops_blog_image.jpg', import.meta.url).href;
+const dataOpsImg = new URL('../components/assests/DataOps-1024x314.png', import.meta.url).href;
+const marketImg = new URL('../components/assests/market.jpg', import.meta.url).href;
+
 const ServicesPage: React.FC = () => {
   return (
     <div>
@@ -48,7 +57,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="Team brainstorming around a whiteboard with sticky notes."
-                src="../components/assests/MVP.jpg"
+                src={mvpImg}
               />
             </div>
           </div>
@@ -60,7 +69,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="UI/UX design mockups on a computer screen and mobile device."
-                src="../components/assests/UI-UX.png"
+                src={uiuxImg}
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -122,7 +131,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A user interacting with a mobile app on a smartphone."
-                src="../components/assests/Mobile-App-Development-Process.png"
+                src={mobileProcessImg}
               />
             </div>
           </div>
@@ -134,7 +143,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A web developer working on a laptop with code on the screen."
-                src="../components/assests/top11.png"
+                src={top11Img}
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -196,7 +205,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A diagram of a CI/CD pipeline."
-                src="../components/assests/devops_blog_image.jpg"
+                src={devopsImg}
               />
             </div>
           </div>
@@ -208,7 +217,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-contain rounded-xl aspect-video shadow-lg"
                 alt="An abstract representation of an AI brain."
-                src="../components/assests/DataOps-1024x314.png"
+                src={dataOpsImg}
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -245,7 +254,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A rocket launching, symbolizing a product launch."
-                src="../components/assests/market.jpg"
+                src={marketImg}
               />
             </div>
             <div className="flex flex-col gap-6">

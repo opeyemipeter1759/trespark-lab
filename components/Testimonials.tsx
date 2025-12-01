@@ -106,27 +106,27 @@ const Testimonials: React.FC = () => {
                 <div>
                   {i === 1 && (
                     <>
-                      <h4 className="font-bold">Jane Doe</h4>
+                      <h4 className="font-bold">Monique L.</h4>
                       <p className="text-sm text-muted-light dark:text-muted-dark">
-                        Founder, Innovate Inc.
+                        Media Chronometer
                       </p>
                     </>
                   )}
 
                   {i === 2 && (
                     <>
-                      <h4 className="font-bold">John Smith</h4>
+                      <h4 className="font-bold">Kenny</h4>
                       <p className="text-sm text-muted-light dark:text-muted-dark">
-                        CEO, TechForward
+                        Fojo Global  
                       </p>
                     </>
                   )}
 
                   {i === 3 && (
                     <>
-                      <h4 className="font-bold">Emily White</h4>
+                      <h4 className="font-bold">Isaac</h4>
                       <p className="text-sm text-muted-light dark:text-muted-dark">
-                        Co-Founder, Solutionize
+                        RCA
                       </p>
                     </>
                   )}

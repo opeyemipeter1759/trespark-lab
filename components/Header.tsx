@@ -21,7 +21,7 @@ const Header: React.FC = () => {
     }
   };
 
-  const isCaseStudiesActive = location.pathname.startsWith('/case-studies') || location.pathname.startsWith('/project-details');
+  const isCaseStudiesActive = location.pathname.startsWith('/project-details');
 
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-card-light dark:border-card-dark px-6 sm:px-10 py-4 sticky top-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm z-50">
@@ -43,7 +43,6 @@ const Header: React.FC = () => {
           <Link to="/" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${location.pathname === '/' ? 'text-primary' : ''}`}>Home</Link>
           <Link to="/services" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${location.pathname === '/services' ? 'text-primary' : ''}`}>Services</Link>
           <Link to="/portfolio" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${location.pathname === '/portfolio' ? 'text-primary' : ''}`}>Portfolio</Link>
-          <Link to="/case-studies" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${isCaseStudiesActive ? 'text-primary' : ''}`}>Case Studies</Link>
           <Link to="/about" className={`text-sm font-medium leading-normal hover:text-primary transition-colors ${location.pathname === '/about' ? 'text-primary' : ''}`}>About Us</Link>
         </div>
         <button onClick={handleContactNav} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary dark:bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
@@ -64,7 +63,6 @@ const Header: React.FC = () => {
            <Link to="/" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
            <Link to="/services" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Services</Link>
            <Link to="/portfolio" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
-           <Link to="/case-studies" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Case Studies</Link>
            <Link to="/about" className="text-left text-sm font-medium leading-normal hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>About Us</Link>
            <button className="w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary dark:bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity" onClick={handleContactNav}>
             <span className="truncate">Contact Us</span>

@@ -1,23 +1,21 @@
 import React from 'react';
 import { ArrowLeft, TrendingUp } from 'lucide-react';
-import { PageType } from '../App';
+import { useNavigate } from 'react-router-dom';
 
-interface ProjectDetailsPageProps {
-  onNavigate: (page: PageType) => void;
-}
+const ProjectDetailsPage: React.FC = () => {
+  const navigate = useNavigate();
 
-const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ onNavigate }) => {
   return (
     <div className="flex flex-col">
       <section className="py-16 sm:py-24 px-4">
         <div className="flex flex-col gap-8">
           <div className="text-center">
             <button 
-              onClick={() => onNavigate('case-studies')}
+              onClick={() => navigate(-1)}
               className="inline-flex items-center gap-2 text-primary font-bold mb-4 group hover:opacity-80 transition-opacity"
             >
               <ArrowLeft className="size-5 transition-transform duration-300 group-hover:-translate-x-1" />
-              <span>Back to Case Studies</span>
+              <span>Back</span>
             </button>
             <h1 className="text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl lg:text-6xl text-secondary dark:text-white">
               Innovate Inc: AI-Powered Analytics

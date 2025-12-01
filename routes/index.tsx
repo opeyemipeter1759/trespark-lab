@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import ServicesPage from '../pages/ServicesPage';
 import AboutPage from '../pages/AboutPage';
-import CaseStudiesPage from '../pages/CaseStudiesPage';
 import PortfolioPage from '../pages/PortfolioPage';
 import ProjectDetailsPage from '../pages/ProjectDetailsPage';
 import ProductPage from '../pages/ProductPage';
@@ -12,7 +11,6 @@ const routes = [
   { path: '/', element: <HomePage /> },
   { path: '/services', element: <ServicesPage /> },
   { path: '/portfolio', element: <PortfolioPage /> },
-  { path: '/case-studies', element: <CaseStudiesPage /> },
   { path: '/project-details', element: <ProjectDetailsPage /> },
   { path: '/about', element: <AboutPage /> },
   { path: '/product', element: <ProductPage /> },

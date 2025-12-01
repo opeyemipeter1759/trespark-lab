@@ -48,7 +48,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="Team brainstorming around a whiteboard with sticky notes."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrjkvjHLEjTLpoHgpQETZnxNLy1Qp-4MzYgUVVeYqS7H9pqCrYXzrGDNAk-lAp71GadG0od2HUaMqgToOS1t944uMZv9xLo6uJESUBpZJ7Kr3rlLzuXMtlQj8tjPBC0xInYO2shzO0RDTX4vqYRLwL8CRRa_dYuj6OeKngk5cYTcZ1xmUGmZt40fnMjp3UWBA0BkeLvL2hIt_KTqDqDshKA4zMk3hllNynTbC7Pvi-PTZiFoxiP166746AD3uISaIHAM0HQAJ0apjq"
+                src="https://illustrations.popsy.co/gray/brainstorming.svg"
               />
             </div>
           </div>
@@ -60,7 +60,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="UI/UX design mockups on a computer screen and mobile device."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGSNOCg-kl7hi_low-_m6gvNZ5R7pdu_ApuH2qLmCl7WuvWSOwR3Si-tPNTBrGkF6w8YkvvgfSidYqY5d0kl7zgKQDRcUMhl4SZnF8z1WCc5_cPVWd80fZa-ilhx26WH8VhC8l6D-JoPwWgcNQMvlwWxiloresIYDuE6RRSByvKHH9AyX8T8-9j4G_eRdj4Mr_JX-5mtg1DkQCHnT0SlycXM6lYodAgI85eXMFWfKDNtVhFUENeDvegDEXixi6Ce5GdYseCCvNZRlx"
+                src="https://illustrations.popsy.co/gray/app-development.svg"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -113,7 +113,7 @@ const ServicesPage: React.FC = () => {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
                   <span className="text-foreground-light dark:text-foreground-dark">
-                    <span className="font-bold">Case Study:</span> Developed a social networking app for 'ConnectSphere' that reached 100,000 downloads within the first three months of launch.
+                    <span className="font-bold">Case Study:</span> Developed a telemedicine app for a startup that reached 10,000 downloads within the first three months of launch.
                   </span>
                 </li>
               </ul>
@@ -122,7 +122,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A user interacting with a mobile app on a smartphone."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-w"
+                src="https://illustrations.popsy.co/gray/phone-in-hand.svg"
               />
             </div>
           </div>
@@ -134,7 +134,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A web developer working on a laptop with code on the screen."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-x"
+                src="https://illustrations.popsy.co/gray/woman-coding.svg"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -157,7 +157,7 @@ const ServicesPage: React.FC = () => {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
                   <span className="text-foreground-light dark:text-foreground-dark">
-                    <span className="font-bold">Case Study:</span> Built a custom e-commerce platform for 'GadgetGo' that resulted in a 40% increase in online sales and a 25% improvement in page load times.
+                    <span className="font-bold">Case Study:</span> Built a custom CRM platform for a leading company that resulted in a 30% increase in online sales and a 25% improvement in customer retention.
                   </span>
                 </li>
               </ul>
@@ -187,7 +187,7 @@ const ServicesPage: React.FC = () => {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
                   <span className="text-foreground-light dark:text-foreground-dark">
-                    <span className="font-bold">Expertise:</span> Our team is proficient with leading DevOps tools and platforms like Docker, Kubernetes, Jenkins, GitHub Actions, and Terraform.
+                    <span className="font-bold">Expertise:</span> We utilize deep multi-cloud expertise to implement resource-optimized architectures that scale reliably, eliminating compute waste for significant OpEx savings.
                   </span>
                 </li>
               </ul>
@@ -196,7 +196,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A diagram of a CI/CD pipeline."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-y"
+                src="https://illustrations.popsy.co/gray/complex-process.svg"
               />
             </div>
           </div>
@@ -208,7 +208,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="An abstract representation of an AI brain."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-z"
+                src="https://illustrations.popsy.co/gray/robot.svg"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -245,7 +245,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A rocket launching, symbolizing a product launch."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbZOeMk_xZq2EfHLT7swEjB1X6-X-JBziGYXoUZBFXAt0jzuL49oEiq28dZJM0ixpvokdDAPb73vTT-P7xfDxiGKDEu95088HLVQDO-Jlsyg2NqQr0bxJ-XbAHonDdbaRoFh6mCShHwDOKsM6EuJL417N1FsqFt0vMYIFI1LZ6NXGYMJBlfw0e2taoiRcterg_FBpEAvLIDOuQjnniz4zDJh_WWHq0AlMy1zC2jdSpDBbKlrXO51lylZrvOSxE0UJ0_qgZrYgo1yCy"
+                src="https://illustrations.popsy.co/gray/business-launch.svg"
               />
             </div>
             <div className="flex flex-col gap-6">

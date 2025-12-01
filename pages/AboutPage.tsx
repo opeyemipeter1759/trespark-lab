@@ -85,59 +85,6 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="flex flex-1 justify-center py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-12 max-w-6xl w-full">
-          <h2 className="text-secondary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] sm:text-4xl text-center">
-            Meet the Team
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center text-center gap-4">
-              <img
-                className="size-48 rounded-full object-cover"
-                alt="Headshot of Alex Chen, Founder & CEO"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCDZ0oqSliNZZHvRfjYa5rKMm95Fk8IRTdVoOCDCCixZGM581H8DUQT33HZh29rOryAQN6Ki9ZCF7QptPKCvcG3HkYCfkrvUqwOBNKc-Tsu9yI6Gg69NIGxraRC2ifJOyzsB-mgmgh5yiu4yJ0CZdplO16Mgv5FHXugfpltrxiW6eLXMBwdfphvefQ7CO2cf2qL-GhzQo4ctwe9Vv9vABmSIHesS-2nU-S3q2n7LmVUHzb-E1bLTvP7LsxRq0vaohUINgYgBMNXbuq"
-              />
-              <div className="flex flex-col gap-1">
-                <h3 className="text-xl font-bold text-secondary dark:text-white">Opeyemi Peter</h3>
-                <p className="text-sm font-medium text-primary">Founder & CEO</p>
-              </div>
-              <p className="text-sm text-muted-light dark:text-muted-dark max-w-xs">
-                A serial entrepreneur with two successful exits, Opeyemi Peter founded the lab to help founders avoid the pitfalls he encountered on his journey.
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center gap-4">
-              <img
-                className="size-48 rounded-full object-cover"
-                alt="Headshot of Maria Rodriguez, Lead Product Strategist"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBft2rIXqbcSeMW1dLqFKVqFWsKeDNdR_B7pxV9NFiidtuW_q7iwRnnUVUR_ZqzEuJ8ZZNytJF52nU3DD0BkBvfNzZabRMpPxwDQHQlclA48CNKppoF1xEeIEo9n-1Ym7YheY2Gb1TUOeSY8x1cx3q2BTCKi-dc15m2WS8VYvqFCDrbrLSeRAtcZvipOIRjfYhtQYTbLaBw8NfCdxqXCmmW4DhzaOfftGOITXx9HrqY3J1OjMXQPfGURe3n2Hxm5v01MwrnKPT0yhd"
-              />
-              <div className="flex flex-col gap-1">
-                <h3 className="text-xl font-bold text-secondary dark:text-white">Daniel Olaniyan </h3>
-                <p className="text-sm font-medium text-primary">Lead Product Strategist</p>
-              </div>
-              <p className="text-sm text-muted-light dark:text-muted-dark max-w-xs">
-                With a decade of experience at top tech firms,Daniel  specializes in market validation and building products users love.
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center gap-4">
-              <img
-                className="size-48 rounded-full object-cover"
-                alt="Headshot of David Lee, Head of Engineering"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5rMRObJafsqj1kVyFV1b-aLlo6vcbfi3JgsVNZBXx30O3sYTdaGA0KdELn_epTXOWElQUpzFsGRSmakA8rj6E8wdCWzB9AZrmgkmC-FY4JgmLYrHD2KIUOqVKnQLIpUNkjbQgdbyc2Qbr3k8zCeNXGXyht3urKwE9fBK8CtWrLo6UZV1fhKOUa-GI5ih4x521IE-ez7WShd3OzX28f55cMlj8QMntme9JQF839BI7j-AB4lL3Vdsj4jqfdknWiAJ0r77pZGLMyhji"
-              />
-              <div className="flex flex-col gap-1">
-                <h3 className="text-xl font-bold text-secondary dark:text-white">David Lee</h3>
-                <p className="text-sm font-medium text-primary">Head of Engineering</p>
-              </div>
-              <p className="text-sm text-muted-light dark:text-muted-dark max-w-xs">
-                David is a full-stack architect who excels at building scalable, robust systems from the ground up for early-stage startups.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Banner */}
       <section className="flex flex-1 justify-center py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card-light dark:bg-background-dark/50" id="contact">
         <div className="flex flex-col items-center gap-6 max-w-3xl w-full text-center">

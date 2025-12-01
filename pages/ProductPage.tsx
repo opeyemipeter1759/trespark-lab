@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, ExternalLink } from 'lucide-react';
 import Testimonials from '../components/Testimonials';
@@ -7,11 +7,18 @@ const ProductPage: React.FC = () => {
   const location = useLocation();
   const { project } = location.state;
 
+  // Ensure we start at the top when this page mounts (fixes preserved scroll position on navigation)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+  }, []);
+
   if (!project) {
     return <div>Project not found</div>;
   }
 
-  const { title, desc, tags, image } = project;
+  const { title, desc, tags, image, link } = project;
   const tagList = tags.split(', ').map((tag: string) => tag.trim());
 
   return (
@@ -37,10 +44,17 @@ const ProductPage: React.FC = () => {
             {desc}
           </p>
           <div className="flex justify-center gap-4 mt-4">
-            <button className="flex items-center justify-center gap-2 h-12 px-6 rounded-lg bg-primary text-secondary dark:text-white font-bold hover:opacity-90 transition-opacity">
-              <span>Live Preview</span>
-              <ExternalLink className="size-5" />
-            </button>
+            {link && (
+              <a 
+                href={link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 h-12 px-6 rounded-lg bg-primary text-secondary dark:text-white font-bold hover:opacity-90 transition-opacity"
+              >
+                <span>Live Preview</span>
+                <ExternalLink className="size-5" />
+              </a>
+            )}
           </div>
         </section>
 

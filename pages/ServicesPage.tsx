@@ -2,6 +2,15 @@ import React from 'react';
 import { ListChecks, CheckCircle, Palette, Layers, Megaphone, Smartphone, Globe, Server, BrainCircuit } from 'lucide-react';
 import CTA from '../components/CTA';
 
+// Resolve local images so Vite includes them during dev/build
+const mvpImg = new URL('../components/assests/MVP.jpg', import.meta.url).href;
+const uiuxImg = new URL('../components/assests/UI-UX.png', import.meta.url).href;
+const mobileProcessImg = new URL('../components/assests/Mobile-App-Development-Process.png', import.meta.url).href;
+const top11Img = new URL('../components/assests/top11.png', import.meta.url).href;
+const devopsImg = new URL('../components/assests/devops_blog_image.jpg', import.meta.url).href;
+const dataOpsImg = new URL('../components/assests/DataOps-1024x314.png', import.meta.url).href;
+const marketImg = new URL('../components/assests/market.jpg', import.meta.url).href;
+
 const ServicesPage: React.FC = () => {
   return (
     <div>
@@ -48,7 +57,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="Team brainstorming around a whiteboard with sticky notes."
-                src="https://illustrations.popsy.co/gray/brainstorming.svg"
+                src={mvpImg}
               />
             </div>
           </div>
@@ -60,7 +69,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="UI/UX design mockups on a computer screen and mobile device."
-                src="https://illustrations.popsy.co/gray/app-development.svg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGSNOCg-kl7hi_low-_m6gvNZ5R7pdu_ApuH2qLmCl7WuvWSOwR3Si-tPNTBrGkF6w8YkvvgfSidYqY5d0kl7zgKQDRcUMhl4SZnF8z1WCc5_cPVWd80fZa-ilhx26WH8VhC8l6D-JoPwWgcNQMvlwWxiloresIYDuE6RRSByvKHH9AyX8T8-9j4G_eRdj4Mr_JX-5mtg1DkQCHnT0SlycXM6lYodAgI85eXMFWfKDNtVhFUENeDvegDEXixi6Ce5GdYseCCvNZRlx"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -122,7 +131,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A user interacting with a mobile app on a smartphone."
-                src="https://illustrations.popsy.co/gray/phone-in-hand.svg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-w"
               />
             </div>
           </div>
@@ -134,7 +143,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A web developer working on a laptop with code on the screen."
-                src="https://illustrations.popsy.co/gray/woman-coding.svg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-x"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -196,7 +205,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A diagram of a CI/CD pipeline."
-                src="https://illustrations.popsy.co/gray/complex-process.svg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-y"
               />
             </div>
           </div>
@@ -206,9 +215,9 @@ const ServicesPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="w-full lg:order-last">
               <img
-                className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
+                className="w-full h-auto object-contain rounded-xl aspect-video shadow-lg"
                 alt="An abstract representation of an AI brain."
-                src="https://illustrations.popsy.co/gray/robot.svg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-3-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-g-2-z"
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -245,7 +254,7 @@ const ServicesPage: React.FC = () => {
               <img
                 className="w-full h-auto object-cover rounded-xl aspect-video shadow-lg"
                 alt="A rocket launching, symbolizing a product launch."
-                src="https://illustrations.popsy.co/gray/business-launch.svg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbZOeMk_xZq2EfHLT7swEjB1X6-X-JBziGYXoUZBFXAt0jzuL49oEiq28dZJM0ixpvokdDAPb73vTT-P7xfDxiGKDEu95088HLVQDO-Jlsyg2NqQr0bxJ-XbAHonDdbaRoFh6mCShHwDOKsM6EuJL417N1FsqFt0vMYIFI1LZ6NXGYMJBlfw0e2taoiRcterg_FBpEAvLIDOuQjnniz4zDJh_WWHq0AlMy1zC2jdSpDBbKlrXO51lylZrvOSxE0UJ0_qgZrYgo1yCy"
               />
             </div>
             <div className="flex flex-col gap-6">

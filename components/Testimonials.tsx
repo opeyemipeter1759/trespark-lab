@@ -79,30 +79,6 @@ const Testimonials: React.FC = () => {
               </p>
 
               <div className="flex items-center gap-4">
-                {i === 1 && (
-                  <img
-                    className="size-12 rounded-full object-cover"
-                    alt="Portrait of Jane Doe"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGSNOCg-kl7hi_low-_m6gvNZ5R7pdu_ApuH2qLmCl7WuvWSOwR3Si-tPNTBrGkF6w8YkvvgfSidYqY5d0kl7zgKQDRcUMhl4SZnF8z1WCc5_cPVWd80fZa-ilhx26WH8VhC8l6D-JoPwWgcNQMvlwWxiloresIYDuE6RRSByvKHH9AyX8T8-9j4G_eRdj4Mr_JX-5mtg1DkQCHnT0SlycXM6lYodAgI85eXMFWfKDNtVhFUENeDvegDEXixi6Ce5GdYseCCvNZRlx"
-                  />
-                )}
-
-                {i === 2 && (
-                  <img
-                    className="size-12 rounded-full object-cover"
-                    alt="Portrait of John Smith"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8gHP-X6Fnf7QCv63vj_wYld1axwrmbNASauIyCmLS2hjE-DNE9RFYdWROexF0un-XjysrTkCmG-OQlg7iT2-snq5H2vrsP9tVQDy0VFCPbSwL0KhsLzl-JjjLymMtqydnFur0ZVZPPhb4KBcQskValW4Ax5tgitLv5xLvg7zJJwPugRZVp5_GuaZ5I3AWY3HhvyYf_UzU6lrDUOyuL_TIsW75N_zmdY5zrJi0MX4ALNju-HhTCwVijg5XPL024Qe70IiyJMvDOfRB"
-                  />
-                )}
-
-                {i === 3 && (
-                  <img
-                    className="size-12 rounded-full object-cover"
-                    alt="Portrait of Emily White"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdL7LuMWow_fnLBh500XfNrBH4UZ7MeKkewlD_1tBtBKluhDb4JPJ-E1ayH_AzHxa39x82_WqJqOEnEJKXao_z0hcR8EACJT6mm2z65U_1iee0Pyi-3bQq-nFiKGgcK5fOFiGbMLwVj7BBJDBWIvnFRyyMNowXKcJYkwrysVvTkwaTqRnyHJAwNYhsFh9fkw47EagOWX-_pIRnaPFyCBWiqyr52b5NmkaAOuTYhHY5LKhUHF-qLcBgoQqRSlJeY7E8T1Ldav8KmhxB"
-                  />
-                )}
-
                 <div>
                   {i === 1 && (
                     <>

@@ -49,7 +49,7 @@ const Testimonials: React.FC = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-center text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] mb-12 text-secondary dark:text-white"
         >
-          What Founders Are Saying
+          What Our Customers Are Saying
         </motion.h2>
 
         {/* Container with Stagger */}

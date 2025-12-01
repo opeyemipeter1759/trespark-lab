@@ -48,7 +48,7 @@ const ServicesPage: React.FC = () => {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-primary mt-1 size-6 shrink-0" />
                   <span className="text-foreground-light dark:text-foreground-dark">
-                    <span className="font-bold">Case Study:</span> Helped Innovate Inc. pivot their initial concept to focus on a key user pain point, leading to a 200% increase in early adopter sign-ups.
+                    <span className="font-bold">Case Study:</span> Helped Sparkpay, a fintech startup, pivot their initial concept to focus on a key user pain point, leading to a 200% increase in early adopter sign-ups.
                   </span>
                 </li>
               </ul>

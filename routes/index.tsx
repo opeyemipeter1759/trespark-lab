@@ -8,26 +8,21 @@ import PortfolioPage from '../pages/PortfolioPage';
 import ProjectDetailsPage from '../pages/ProjectDetailsPage';
 import ProductPage from '../pages/ProductPage';
 
-interface RouteDefinition {
-  path: string;
-  component: React.ComponentType;
-}
-
-const routeConfig: RouteDefinition[] = [
-  { path: '/', component: HomePage },
-  { path: '/services', component: ServicesPage },
-  { path: '/portfolio', component: PortfolioPage },
-  { path: '/case-studies', component: CaseStudiesPage },
-  { path: '/project-details', component: ProjectDetailsPage },
-  { path: '/about', component: AboutPage },
-  { path: '/product', component: ProductPage },
+const routes = [
+  { path: '/', element: <HomePage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/portfolio', element: <PortfolioPage /> },
+  { path: '/case-studies', element: <CaseStudiesPage /> },
+  { path: '/project-details', element: <ProjectDetailsPage /> },
+  { path: '/about', element: <AboutPage /> },
+  { path: '/product', element: <ProductPage /> },
 ];
 
 const AppRoutes: React.FC = () => {
   return (
     <Routes>
-      {routeConfig.map(({ path, component: Component }) => (
-        <Route key={path} path={path} element={<Component />} />
+      {routes.map((route) => (
+        <Route key={route.path} path={route.path} element={route.element} />
       ))}
     </Routes>
   );
